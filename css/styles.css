@@ -1,0 +1,396 @@
+/*------------------------------------------------------------------------------*/
+/*-----------------------MOBILE FIRST-------------------------*/
+/*------------------------------------------------------------------------------*/
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+}
+
+header,nav, main, footer, article, section {
+	border: 1px solid black;
+}
+
+body{
+	z-index: 2;
+	background: linear-gradient(#370054,#b89300,#bbbbbb,#b30073);
+}
+
+@font-face {
+	font-family: 'freebooter_scriptregular';
+	src: url('../css/webfont/freebooterscript/freebooterscript-webfont.eot');
+	src: url('../css/webfont/freebooterscript/freebooterscript-webfont.eot?#iefix') format('embedded-opentype'),
+			url('../css/webfont/freebooterscript/freebooterscript-webfont.woff2') format('woff2'),
+			url('../css/webfont/freebooterscript/freebooterscript-webfont.woff') format('woff'),
+			url('../css/webfont/freebooterscript/freebooterscript-webfont.ttf') format('truetype'),
+			url('../css/webfont/freebooterscript/freebooterscript-webfont.svg#freebooter_scriptregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*-START-------------------------------------------------------------------------*/
+/*-----------------------NAV + FOOTER-------------------------*/
+/*------------------------------------------------------------------------------*/
+
+header{
+	height: 170px;
+	background: no-repeat center/100% url(../img/lartrendvisible_header1.png);
+}
+
+h1,h2{
+	font-family: 'freebooter_scriptregular';
+	text-align: center;
+	line-height: 1.5;
+	font-size: 45px;
+	text-decoration-color: #58253f;
+	text-shadow: 2px 2px rgb(124, 124, 124);
+}
+
+.inline-flex{
+	display: flex;
+	list-style-type: none;
+	justify-content: space-between;
+	font-size: 20px;
+	padding: 5px;
+}
+
+nav{
+	z-index: 2;
+	position: sticky;
+	top: 0;
+	background: linear-gradient(#370054,#b89300,#bbbbbb,#b30073);
+}
+
+nav a{
+	text-decoration: none;
+}
+
+
+footer{
+	height: 170px;
+	background: no-repeat center/100% url(../img/lartrendvisible_footer1.png);
+}
+
+footer p{
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	margin-top: 70px;
+	font-size: 20px;
+	color:black;
+	text-shadow: 1px 1px violet;
+}
+/*------------------------------------------------------------------------------*/
+/*-----------------------NAV + FOOTER-------------------------*/
+/*-------------------------------------------------------------------------END-*/
+
+
+
+/*-START-------------------------------------------------------------------------*/
+/*-----------------------MAIN-------------------------*/
+/*------------------------------------------------------------------------------*/
+
+main article, main section{
+	background: white;
+	width: 90%;
+	margin: auto;
+	border-radius: 10px;
+}
+
+main a{
+	color: black;
+	text-decoration: underline;
+	font-style: italic;
+}
+
+h4{
+	margin: 5px;
+	text-align: left;
+	font-size: 22px;
+}
+
+.art {
+	background: no-repeat center/100% url(../img/header.jpg);
+	padding: 20%;
+}
+
+.art h2{
+	font-size: 40px;
+}
+
+div.logo-partenaires{
+	display: flex;
+}
+
+
+/*------------------------------------------------------------------------------*/
+/*-----------------------MAIN-------------------------*/
+/*-------------------------------------------------------------------------END-*/
+
+
+
+/*-START-------------------------------------------------------------------------*/
+/*-----------------------ARTICLE-------------------------*/
+/*------------------------------------------------------------------------------*/
+
+h3{
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	text-align: center;
+	font-size: 25px;
+	padding: 10%;
+}
+
+.video{
+	text-align: center;
+	margin-top: 10px;
+}
+
+.italic{
+	font-style: italic;
+	text-align: center;
+}
+
+.testimony{
+	display: block;
+	max-width: 200px;
+	margin: auto;
+}
+
+.VirtualReality iframe{
+	width: 300px;
+}
+
+.serigraphie{
+	padding: 4%;
+}
+
+.illustration{
+	display: block;
+	margin: 0 auto;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+p{
+	text-align: justify;
+	font-size: 20px;
+	padding: 4%;
+	margin: auto;
+	margin-bottom: 15%;
+}
+
+.bolder{
+	font-weight: bold;
+}
+
+span .center{
+	text-align: center;
+}
+
+.logo-partenaires a{
+	max-width: 150px;
+	margin: auto;
+}
+.logo-partenaires{
+	display: flex;
+	flex-direction: column;
+}
+
+/*------------------------------------------------------------------------------*/
+/*-----------------------ARTICLE-------------------------*/
+/*-------------------------------------------------------------------------END-*/
+
+
+
+/*--START------------------------------------------------------------------*/
+/** --------------------GALLERY------------------- **/
+/*-------------------------------------------------------------------------*/
+.gallery {
+    background: white;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.ImageGallery {
+	width: 85%;
+	margin: 0px auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.thumbnail img{
+	border-radius: 10%;
+	box-shadow:6px 6px rgba(199, 1, 248, 0.15);
+	margin: 2px 2px;
+}
+
+.lightbox {
+    /**lightbox hidden */
+    display: none;
+
+    /** Position et style */
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 10%;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 2%;
+}
+
+.lightbox:target {
+    outline: none;
+    display: block;
+}
+
+.figcaption{
+	border-radius: 5px;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 20px;
+	background-color: white;
+}
+
+/*-------------------------------------------------------------------------*/
+/** ---------------------------GALLERY------------------------------ **/
+/*------------------------------------------------------------------END----*/
+
+
+/*--START------------------------------------------------------------------*/
+/** --------------------PAGES IMAGES------------------- **/
+/*-------------------------------------------------------------------------*/
+.thumbnails img{
+	display: block;
+	margin: auto;
+	margin-top: 30%;
+	margin-bottom: 30%;
+	border-radius: 10%;
+	width: 75%;
+}
+/*--------------------------------------------------------------------*/
+/** --------------------PAGES IMAGES------------------- **/
+/*------------------------------------------------------------------END*/
+
+/*START-----------------------------------------------------------------*/
+/** --------------------RESPONSIVE DESIGN------------------- **/
+/*------------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+	.testimony{
+		display: block;
+		max-width: 400px;
+		margin: auto;
+	}
+
+	p{
+		font-size: 20px;
+		padding: 4%;
+		margin-bottom: 50px;
+	}
+
+	.virtualreality{
+		width: 100%;
+	}
+
+	.art {
+		padding: 29%;
+	}
+
+	.art h2{
+		font-size: 56px;
+	}
+
+	.ImageGallery {
+		width: 80%;
+	}
+
+	.thumbnail img{
+		display: block;
+		margin: auto;
+	}
+
+	main article, main section {
+		width: 70%;
+	}
+}
+
+@media screen and (min-width: 1300px){
+	h1, h2{
+		font-size: 80px;
+		line-height: 2.5;
+	}
+	p{
+		margin-bottom: 10px;
+		margin: auto;
+	}
+
+	.testimony{
+		max-width: 600px;
+	}
+
+	.art {
+		padding: 23%;
+	}
+
+	.definition{
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+	}
+
+	.logo-partenaires{
+		flex-direction: row;
+	}
+
+	.thumbnail img{
+		display: block;
+		margin: auto;
+	}
+
+	main article, main section {
+		width: 60%;
+	}
+
+	.ImageGallery {
+		width: 80%;
+		margin: 30px auto;
+	}
+
+	.thumbnail img:hover {
+		transform: scale(1.15) rotate(10deg);
+		box-shadow:10px 10px 1px #370054;
+		animation-name: shadow;
+		animation-direction: alternate;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+	}
+
+	@keyframes shadow {
+		0%{
+			box-shadow:10px 10px 1px #7602b4 ;
+		}
+		33%{
+			box-shadow:10px 10px 1px #ffc400;
+		}
+		66%{
+			box-shadow:10px 10px 1px #cc02bb;
+		}
+		100%{
+			box-shadow:10px 10px 1px  #ffffff ;
+		}
+	}
+
+	.ImageGallery {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
